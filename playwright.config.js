@@ -4,7 +4,7 @@ export default defineConfig ({
 
     testDir : './tests',
     use: {
-            headless : false,
+            headless : process.env.CI? true : false,
             baseURL : 'https://demo.automationtesting.in/Index.html',
             viewport: null,
             launchOptions :{
