@@ -7,8 +7,7 @@ test('Playwright Automation Prcatice Test', {tag : ['@basictest']}, async ({page
 
     await page.goto('/');
     await utils.clickOnWebElement('#btn2');
-    await page.pause();
     await page.locator('#imagesrc').setInputFiles('./test-data/Payslip India January_2026.pdf');
 
-    
+
 });
