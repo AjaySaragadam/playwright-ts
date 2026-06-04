@@ -5,7 +5,7 @@ test('Playwright Automation Prcatice Test', {tag : ['@basictest']}, async ({page
 
     test.step('Navigating to the Application', async ()=> {
        await page.goto('https://demo.automationtesting.in/', {
-        waitUntil : 'load',
+        waitUntil : 'domcontentloaded',
         timeout : 60000
        });
        utils.attachScreenShotToReport('Navigating to the Application', TestInfo);
