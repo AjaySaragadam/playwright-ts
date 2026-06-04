@@ -1,13 +1,19 @@
 import {test,expect} from '@playwright/test'
 
 import LoginPage from '../../pageobjects/LoginPageObject'
-
-test.describe.parallel("Login Test Cases", async () => {
+import Utils from '../../Utilities/Utils';
+test.describe.parallel("Login Test Cases", {tag:'@swaglabtests'}, async () => {
 
 test('Login with Valid Credentials', async ({page}) => 
 {
+     const utils = new Utils(page);
+     
+    test.step('Navigating to Swag Labs Application', async () => {
+        await page.goto('/');
+      
+    });
 
-    await page.goto('/');
+
     const loginPage = new LoginPage(page);
      await loginPage.enterUserName("problem_user");
      await loginPage.enterPassword("secret_sauce");
