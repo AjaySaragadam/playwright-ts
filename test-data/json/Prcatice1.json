@@ -1,0 +1,16 @@
+{
+            "FirstName" : "Mounika",
+           "LastName" : "Saragadam",
+           "Address" : "Old Pendurthi",
+           "Email" : "mounika.saragadam@example.com",
+            "Phone" : "0987654321",
+            "Skills" : "Java",
+            "Country" : "India",
+            "dob" : {
+                "day" : "16",
+                "month" : "October",
+                "year" : "2015"
+            },
+            "Password" : "Mounika@6666",
+            "ConfirmPassword" : "Mounika@6666"
+}

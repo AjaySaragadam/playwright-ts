@@ -1,0 +1,21 @@
+[
+        {
+           "FirstName" : "Ajay",
+           "LastName" : "Saragadam",
+           "Address" : "Old Pendurthi",
+           "Email" : "ajay.saragadam@example.com",
+            "Phone" : "1234567890",
+            "Skills" : "Android",
+            "Country" : "Australia",
+            "dob" : {
+                "day" : "8",
+                "month" : "November",
+                "year" : "1998"
+            },
+            "Password" : "Ajay@123",
+            "ConfirmPassword" : "Ajay@123"
+
+        }
+
+        
+    ]

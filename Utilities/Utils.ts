@@ -1,4 +1,5 @@
 import { Page, TestInfo } from "@playwright/test";
+// Use Uint8Array for screenshots to avoid depending on Node's Buffer types
 
 
 export default class Utils
@@ -41,20 +42,22 @@ export default class Utils
           await this.page.locator(locator).setInputFiles(filePaths);
      }
 
-     public async takeScreenShot() : Promise<void>
+     public async takeScreenShot() : Promise<Uint8Array>
      {
-        await this.page.screenshot();
+        return await this.page.screenshot();
      }
 
 
      public async attachScreenShotToReport(stepDescription : string, testinfo: TestInfo) : Promise<void>
      {
-            testinfo.attach(stepDescription, { 
+         
+            await testinfo.attach(stepDescription, { 
              
                body : await this.takeScreenShot(),
                contentType: 'image/png'
 
             })
      }
+
      
 }
